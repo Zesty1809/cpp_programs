@@ -3,43 +3,27 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "Build with GCC 12.3.0",
-			"command": "/usr/bin/g++-12",
+			"label": "Build with g++ 13.1.0",
+			"command": "C:/msys64/mingw64/bin/g++.exe",
 			"args": [
-				"-g",
 				"-std=c++20",
-				"${workspaceFolder}/*.cpp",
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
 				"-o",
-				"${fileDirname}/zesty"
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],
 			"options": {
-				"cwd": "${fileDirname}"
+				"cwd": "C:/msys64/mingw64/bin"
 			},
 			"problemMatcher": [
 				"$gcc"
 			],
-			"group": "build",
-			"detail": "compiler: /usr/bin/g++-12"
-		},
-		{
-			"type": "cppbuild",
-			"label": "Build with clang 15.0.7",
-			"command": "/usr/bin/clang++-15",
-			"args": [
-				"-g",
-				"-std=c++20",
-				"${workspaceFolder}/*.cpp",
-				"-o",
-				"${fileDirname}/zesty"
-			],
-			"options": {
-				"cwd": "${fileDirname}"
+			"group": {
+				"kind": "build",
+				"isDefault": true
 			},
-			"problemMatcher": [
-				"$gcc"
-			],
-			"group": "build",
-			"detail": "compiler: /usr/bin/clang++-15"
+			"detail": "compiler: C:/msys64/mingw64/bin/g++.exe"
 		}
 	]
 }
